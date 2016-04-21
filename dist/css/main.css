@@ -1,0 +1,372 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  border: none; }
+
+@font-face {
+  font-family: "PTSansBold";
+  src: url("../fonts/PTSansBold/PTSansBold.eot");
+  src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype"), url("../fonts/PTSansBold/PTSansBold.svg#PTSansBold") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PTSansNarrow";
+  src: url("../fonts/PTSansNarrow/PTSansNarrow.eot");
+  src: url("../fonts/PTSansNarrow/PTSansNarrow.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansNarrow/PTSansNarrow.ttf") format("truetype"), url("../fonts/PTSansNarrow/PTSansNarrow.svg#PTSansNarrow") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PTSansRegular";
+  src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+  src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype"), url("../fonts/PTSansRegular/PTSansRegular.svg#PTSansRegular") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/roboto.eot");
+  src: url("../fonts/roboto/roboto.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/roboto.ttf") format("truetype"), url("../fonts/roboto/roboto.svg#Roboto") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+body {
+  font: 16px 'PTSansRegular', sans-serif;
+  font-weight: 300; }
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 10px; } }
+
+a, a:hover, a:visited, a:active, a:link {
+  color: #127ab7;
+  text-decoration: none; }
+
+p {
+  font-family: "PTSansRegular", sans-serif;
+  font-size: 1.05em;
+  color: #333333; }
+
+h1 {
+  font-family: "PTSansBold", sans-serif;
+  font-size: 2.4em;
+  color: #127ab7;
+  text-transform: uppercase; }
+
+h2 {
+  font-family: "PTSansNarrow", sans-serif;
+  font-size: 2.4em;
+  color: #17a806;
+  text-transform: uppercase; }
+  h2 > span {
+    font-weight: 500; }
+
+h3 {
+  font-size: 1.2em;
+  font-family: "PTSansBold", sans-serif;
+  color: #117cba;
+  text-transform: uppercase; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.buttons-wrap button {
+  width: 201px;
+  height: 75px;
+  margin-bottom: 30px;
+  background: url(../img/sprite.png);
+  background-position: 0px -2px; }
+  .buttons-wrap button:hover {
+    background-position: -215px -2px; }
+
+button.google {
+  margin-left: 25px;
+  background-position: -430px -2px; }
+  button.google:hover {
+    background-position: -645px -2px; }
+
+header {
+  min-height: 100vh;
+  background: url(../img/bg.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding-top: 25px;
+  margin-bottom: 36px; }
+  header nav {
+    margin-top: 30px;
+    text-align: right; }
+    header nav li {
+      display: inline-block;
+      cursor: pointer; }
+      header nav li:not(:first-child) {
+        margin-left: 55px; }
+      header nav li a {
+        font-family: "PTSansBold", sans-serif;
+        display: inline-block;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 10px;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease; }
+        header nav li a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: #127ab7;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        header nav li a:hover::after {
+          width: 100%;
+          left: 0; }
+  header .top-wrap {
+    margin-top: 200px; }
+    @media screen and (max-width: 750px) {
+      header .top-wrap {
+        margin-top: 100px; } }
+    header .top-wrap .text-wrap {
+      margin: 60px 0; }
+  header .buttons-wrap {
+    text-align: left; }
+    @media screen and (max-width: 750px) {
+      header .buttons-wrap .google {
+        margin: 0; } }
+
+#about-1 {
+  padding: 85px 0 120px;
+  text-align: center;
+  overflow: hidden; }
+  @media screen and (max-width: 1200px) {
+    #about-1 {
+      padding: 85px 0 20px; } }
+  #about-1 .rel {
+    position: relative; }
+    #about-1 .rel .text-wrap {
+      margin: 160px 15px 50px 115px;
+      text-align: left;
+      position: relative;
+      z-index: 2; }
+      @media screen and (max-width: 1200px) {
+        #about-1 .rel .text-wrap {
+          margin: 60px 15px 50px 25px; } }
+    #about-1 .rel .img-wrap {
+      position: absolute;
+      top: 0;
+      left: 0; }
+      @media screen and (max-width: 1200px) {
+        #about-1 .rel .img-wrap {
+          display: none; } }
+
+#about-2 {
+  padding-top: 100px;
+  text-align: center;
+  background: url(../img/bg-2.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center; }
+  #about-2 .img-wrap {
+    margin-top: 50px; }
+    #about-2 .img-wrap img {
+      width: 170px; }
+  #about-2 .text-wrap h3 {
+    padding: 30px 0; }
+
+#download {
+  padding: 100px 0;
+  text-align: center;
+  background: url(../img/bg-3.jpg);
+  background-size: cover; }
+  #download .text-wrap {
+    padding: 50px 0 30px; }
+  #download button {
+    width: 150px;
+    background-position: -1547px -2px; }
+    #download button:hover {
+      background-position: -1397px -2px; }
+    #download button.google {
+      background-position: -1849px -2px; }
+      #download button.google:hover {
+        background-position: -1698px -2px; }
+
+#feedbacks {
+  padding: 100px 0 0;
+  text-align: center; }
+  #feedbacks .owl-carousel p {
+    display: block;
+    text-align: justify;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #57c8f3; }
+  #feedbacks .owl-carousel span {
+    display: block;
+    padding-top: 10px;
+    text-align: center; }
+
+.carousel-wrap {
+  padding: 50px 50px 0 50px;
+  position: relative; }
+  .carousel-wrap .arrow {
+    display: block;
+    width: 34px;
+    height: 62px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%; }
+  .carousel-wrap .next {
+    right: 0; }
+  .carousel-wrap .prev {
+    left: 0; }
+
+#contacts {
+  padding: 100px 0;
+  text-align: center; }
+  #contacts .text-wrap {
+    padding: 50px 115px 0 115px; }
+    @media screen and (max-width: 720px) {
+      #contacts .text-wrap {
+        padding: 50px 20px 0 20px; } }
+  #contacts .form {
+    padding: 25px 215px; }
+    @media screen and (max-width: 800px) {
+      #contacts .form {
+        padding: 25px 50px; } }
+    #contacts .form input {
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 16px;
+      border: none;
+      -webkit-box-shadow: inset 0px 3px 38px -2px rgba(0, 0, 0, 0.62);
+              box-shadow: inset 0px 3px 38px -2px rgba(0, 0, 0, 0.62); }
+    #contacts .form textarea {
+      display: block;
+      width: 100%;
+      height: 129px;
+      padding: 16px;
+      resize: none;
+      border: none;
+      -webkit-box-shadow: inset 0px 3px 38px -2px rgba(0, 0, 0, 0.62);
+              box-shadow: inset 0px 3px 38px -2px rgba(0, 0, 0, 0.62); }
+
+.white {
+  color: #fff; }
+
+#send {
+  color: #127ab7;
+  border: 2px solid #127ab7;
+  font-weight: 500;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  padding: 14px 34px;
+  margin-top: 20px;
+  background-color: transparent;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  #send:hover {
+    background-color: #127ab7;
+    color: #fff; }
+
+#bottom {
+  padding: 33px 0;
+  background-color: #127ab7;
+  text-align: center; }
+  #bottom .buttons-wrap {
+    padding-top: 15px; }
+    @media screen and (max-width: 980px) {
+      #bottom .buttons-wrap {
+        margin-bottom: 30px; } }
+    #bottom .buttons-wrap button {
+      width: 150px;
+      background-position: -1547px -2px; }
+      #bottom .buttons-wrap button:hover {
+        background-position: -1397px -2px; }
+      #bottom .buttons-wrap button.google {
+        background-position: -1849px -2px; }
+        #bottom .buttons-wrap button.google:hover {
+          background-position: -1698px -2px; }
+    @media screen and (max-width: 465px) {
+      #bottom .buttons-wrap button.google {
+        margin-left: 0px; } }
+  #bottom .icons {
+    padding-top: 15px;
+    padding-right: 15px;
+    text-align: center; }
+    @media screen and (max-width: 980px) {
+      #bottom .icons {
+        padding-right: 0;
+        text-align: center; } }
+    #bottom .icons span {
+      display: inline-block;
+      width: 73px;
+      height: 73px;
+      margin-left: 30px;
+      background: url(../img/sprite.png);
+      cursor: pointer; }
+      @media screen and (max-width: 465px) {
+        #bottom .icons span {
+          margin-left: 0px; } }
+    #bottom .icons .vk {
+      background-position: -2876px -5px; }
+      #bottom .icons .vk:hover {
+        background-position: -2961px -5px; }
+    #bottom .icons .fb {
+      background-position: -3046px -6px; }
+      #bottom .icons .fb:hover {
+        background-position: -3130px -6px; }
+    #bottom .icons .tw {
+      background-position: -3216px -4px; }
+      #bottom .icons .tw:hover {
+        background-position: -3301px -7px; }
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #093e5c; }
+  footer p {
+    color: #fff;
+    font-weight: 300; }
